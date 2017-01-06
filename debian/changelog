@@ -1,3 +1,15 @@
+pcsc-lite (1.8.14-1ubuntu1.16.04.1) xenial-security; urgency=medium
+
+  * SECURITY UPDATE: denial of service and possible code execution via
+    cardsList use-after-free
+    - debian/patches/CVE-2016-10109-1.patch: prevent use-after-free of
+      cardsList in src/winscard_svc.c.
+    - debian/patches/CVE-2016-10109-2.patch: check for a valid hContext
+      handles in src/winscard_svc.c.
+    - CVE-2016-10109
+
+ -- Marc Deslauriers <marc.deslauriers@ubuntu.com>  Fri, 06 Jan 2017 10:09:59 -0500
+
 pcsc-lite (1.8.14-1ubuntu1) wily; urgency=medium
 
   * Merge new upstream release from Debian Unstable (LP: #1483750).
